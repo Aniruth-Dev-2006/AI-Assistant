@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;" />
+  <title>cue</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Static Top-center Dynamic Island -->
+    <div id="toolbar" class="island">
+      <!-- Collapsed Content -->
+      <div class="island-collapsed">
+        <div class="island-icon" id="island-logo"></div>
+        <canvas id="siri-canvas" class="idle"></canvas>
+      </div>
+      <!-- Expanded Content -->
+      <div class="island-expanded">
+        <div class="island-header">
+          <span class="island-time" id="island-time">00:00</span>
+        </div>
+        <div class="island-controls">
+          <button class="island-btn" id="island-mute"><span class="ic"></span></button>
+          <button class="island-btn island-btn-red" id="island-stop"><span class="ic"></span></button>
+          <button class="island-btn" id="island-hide"><span class="ic"></span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main assistant panel (Draggable) -->
+    <div id="panel-wrap">
+      <div id="panel-drag-handle"></div>
+      <span id="live-dot" class="off"></span>
+      <div id="panel" class="glass">
+        <div id="messages"></div>
+
+        <div id="action-row">
+          <button class="act" data-mode="probe"><span class="ic"></span><span>Probe Answer</span></button>
+          <span class="sep">•</span>
+          <button class="act" data-mode="analyze"><span class="ic"></span><span>Analyze Code</span></button>
+          <span class="sep">•</span>
+          <button class="act" data-mode="evaluate"><span class="ic"></span><span>Evaluate</span></button>
+        </div>
+
+        <div id="composer">
+          <div id="input-area">
+            <div id="placeholder">Ask about your screen or conversation, or <span class="keycap">⌘</span><span class="keycap">⏎</span> for Assist</div>
+            <textarea id="input" rows="1" spellcheck="false"></textarea>
+          </div>
+          <div id="composer-bottom">
+            <button id="smart-toggle" class="smart-pill"><span class="ic"></span><span>Smart</span></button>
+            <button id="more-btn" class="more-btn" title="Settings"></button>
+            <div class="spacer"></div>
+            <button id="send-btn" title="Send"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="icons.js"></script>
+  <script src="siriWave.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

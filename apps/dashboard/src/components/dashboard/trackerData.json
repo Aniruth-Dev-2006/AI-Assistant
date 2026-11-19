@@ -1,0 +1,589 @@
+{
+  "1. Master Tracker": [
+    {
+      "Vendor": "Firecrest",
+      "User Name": "[User 1]",
+      "Email Address": "user1@firecrest.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Active"
+    },
+    {
+      "Vendor": "Firecrest",
+      "User Name": "[User 2]",
+      "Email Address": "user2@firecrest.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Pending"
+    },
+    {
+      "Vendor": "Firecrest",
+      "User Name": "[User 3]",
+      "Email Address": "user3@firecrest.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Revoked"
+    },
+    {
+      "Vendor": "PPD",
+      "User Name": "[User 1]",
+      "Email Address": "user1@ppd.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Active"
+    },
+    {
+      "Vendor": "PPD",
+      "User Name": "[User 2]",
+      "Email Address": "user2@ppd.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "End Date ": "when blank , status should be inactive ",
+      "Status": "Inactive"
+    },
+    {
+      "Vendor": "PPD",
+      "User Name": "[User 3]",
+      "Email Address": "user3@ppd.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Inactive"
+    },
+    {
+      "Vendor": "Signant",
+      "User Name": "[User 1]",
+      "Email Address": "user1@signant.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Active"
+    },
+    {
+      "Vendor": "Signant",
+      "User Name": "[User 2]",
+      "Email Address": "user2@signant.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Inactive"
+    },
+    {
+      "Vendor": "Signant",
+      "User Name": "[User 3]",
+      "Email Address": "user3@signant.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Inactive"
+    },
+    {
+      "Vendor": "Trifecta",
+      "User Name": "[User 1]",
+      "Email Address": "user1@trifecta.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Active"
+    },
+    {
+      "Vendor": "Trifecta",
+      "User Name": "[User 2]",
+      "Email Address": "user2@trifecta.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Inactive"
+    },
+    {
+      "Vendor": "Trifecta",
+      "User Name": "[User 3]",
+      "Email Address": "user3@trifecta.com",
+      "Role": "[Role]",
+      "Site": "LTS17367",
+      "Start Date": "11-Aug-2026",
+      "Status": "Inactive"
+    }
+  ],
+  "2. Vendor Report": [
+    {
+      "Vendor": "Firecrest",
+      "User Name": "[User 1]",
+      "Email Address": "user1@firecrest.com",
+      "Role": "[Role]",
+      "Status": "Active",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "Firecrest",
+      "User Name": "[User 2]",
+      "Email Address": "user2@firecrest.com",
+      "Role": "[Role]",
+      "Status": "Pending",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "Firecrest",
+      "User Name": "[User 3]",
+      "Email Address": "user3@firecrest.com",
+      "Role": "[Role]",
+      "Status": "Revoked",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "PPD",
+      "User Name": "[User 1]",
+      "Email Address": "user1@ppd.com",
+      "Role": "[Role]",
+      "Status": "Active",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "PPD",
+      "User Name": "[User 2]",
+      "Email Address": "user2@ppd.com",
+      "Role": "[Role]",
+      "Status": "Inactive",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "PPD",
+      "User Name": "[User 3]",
+      "Email Address": "user3@ppd.com",
+      "Role": "[Role]",
+      "Status": "Inactive",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "Signant",
+      "User Name": "[User 1]",
+      "Email Address": "user1@signant.com",
+      "Role": "[Role]",
+      "Status": "Active",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "Signant",
+      "User Name": "[User 2]",
+      "Email Address": "user2@signant.com",
+      "Role": "[Role]",
+      "Status": "Inactive",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "Signant",
+      "User Name": "[User 3]",
+      "Email Address": "user3@signant.com",
+      "Role": "[Role]",
+      "Status": "Inactive",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "Trifecta",
+      "User Name": "[User 1]",
+      "Email Address": "user1@trifecta.com",
+      "Role": "[Role]",
+      "Status": "Active",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "Trifecta",
+      "User Name": "[User 2]",
+      "Email Address": "user2@trifecta.com",
+      "Role": "[Role]",
+      "Status": "Inactive",
+      "Last Login": "10-Aug-2026"
+    },
+    {
+      "Vendor": "Trifecta",
+      "User Name": "[User 3]",
+      "Email Address": "user3@trifecta.com",
+      "Role": "[Role]",
+      "Status": "Inactive",
+      "Last Login": "10-Aug-2026"
+    }
+  ],
+  "3. Reconciliation Report": [
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "This sheet automatically compares Master Tracker vs Vendor Report and highlights discrepancies"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "Vendor",
+      "__EMPTY": "User Name",
+      "__EMPTY_1": "Email",
+      "__EMPTY_2": "Master Status",
+      "__EMPTY_3": "Vendor Status",
+      "__EMPTY_4": "Status Match?",
+      "__EMPTY_5": "Master Role",
+      "__EMPTY_6": "Vendor Role",
+      "__EMPTY_7": "Role Match?",
+      "__EMPTY_8": "Discrepancy Type",
+      "__EMPTY_9": "Action Required",
+      "__EMPTY_10": "Notes"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "Firecrest",
+      "__EMPTY": "[User 1]",
+      "__EMPTY_1": "user1@firecrest.com",
+      "__EMPTY_2": "Active",
+      "__EMPTY_3": "Active",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "Firecrest",
+      "__EMPTY": "[User 2]",
+      "__EMPTY_1": "user2@firecrest.com",
+      "__EMPTY_2": "Pending",
+      "__EMPTY_3": "Pending",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "Firecrest",
+      "__EMPTY": "[User 3]",
+      "__EMPTY_1": "user3@firecrest.com",
+      "__EMPTY_2": "Revoked",
+      "__EMPTY_3": "Revoked",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "PPD",
+      "__EMPTY": "[User 1]",
+      "__EMPTY_1": "user1@ppd.com",
+      "__EMPTY_2": "Active",
+      "__EMPTY_3": "Active",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "PPD",
+      "__EMPTY": "[User 2]",
+      "__EMPTY_1": "user2@ppd.com",
+      "__EMPTY_2": "Inactive",
+      "__EMPTY_3": "Inactive",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "PPD",
+      "__EMPTY": "[User 3]",
+      "__EMPTY_1": "user3@ppd.com",
+      "__EMPTY_2": "Inactive",
+      "__EMPTY_3": "Inactive",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "Signant",
+      "__EMPTY": "[User 1]",
+      "__EMPTY_1": "user1@signant.com",
+      "__EMPTY_2": "Active",
+      "__EMPTY_3": "Active",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "Signant",
+      "__EMPTY": "[User 2]",
+      "__EMPTY_1": "user2@signant.com",
+      "__EMPTY_2": "Inactive",
+      "__EMPTY_3": "Inactive",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "Signant",
+      "__EMPTY": "[User 3]",
+      "__EMPTY_1": "user3@signant.com",
+      "__EMPTY_2": "Inactive",
+      "__EMPTY_3": "Inactive",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "Trifecta",
+      "__EMPTY": "[User 1]",
+      "__EMPTY_1": "user1@trifecta.com",
+      "__EMPTY_2": "Active",
+      "__EMPTY_3": "Active",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "Trifecta",
+      "__EMPTY": "[User 2]",
+      "__EMPTY_1": "user2@trifecta.com",
+      "__EMPTY_2": "Inactive",
+      "__EMPTY_3": "Inactive",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    },
+    {
+      "RECONCILIATION REPORT - Automated Comparison": "Trifecta",
+      "__EMPTY": "[User 3]",
+      "__EMPTY_1": "user3@trifecta.com",
+      "__EMPTY_2": "Inactive",
+      "__EMPTY_3": "Inactive",
+      "__EMPTY_4": "✓ Match",
+      "__EMPTY_5": "[Role]",
+      "__EMPTY_6": "[Role]",
+      "__EMPTY_7": "✓ Match",
+      "__EMPTY_8": "None",
+      "__EMPTY_9": "No Action"
+    }
+  ],
+  "4. Summary Dashboard": [
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Total Users in Master Tracker:",
+      "__EMPTY": 12
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Total Users in Vendor Report:",
+      "__EMPTY": 12
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Perfect Matches:",
+      "__EMPTY": 12
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Status Mismatches:",
+      "__EMPTY": 0
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Role Mismatches:",
+      "__EMPTY": 0
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Total Discrepancies:",
+      "__EMPTY": 0
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Reconciliation Rate:",
+      "__EMPTY": "#DIV/0!"
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "DISCREPANCIES BY VENDOR"
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Vendor",
+      "__EMPTY": "Total Users",
+      "__EMPTY_1": "Discrepancies",
+      "__EMPTY_2": "Match Rate"
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Firecrest",
+      "__EMPTY": 3,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "100%"
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "PPD",
+      "__EMPTY": 3,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "100%"
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Signant",
+      "__EMPTY": 3,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "100%"
+    },
+    {
+      "RECONCILIATION SUMMARY DASHBOARD": "Trifecta",
+      "__EMPTY": 3,
+      "__EMPTY_1": 0,
+      "__EMPTY_2": "100%"
+    }
+  ],
+  "5. Instructions": [
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "STEP 1: UPDATE MASTER TRACKER"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Go to '1. Master Tracker' sheet"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• This is YOUR internal record of vendor access (source of truth)"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Add/update user records as you grant or revoke access"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Use the dropdown in 'Access Status' column (Pending/Active/Revoked/Expired)"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "STEP 2: PASTE VENDOR REPORT"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Go to '2. Vendor Report' sheet"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Paste the access report provided by your vendor"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Make sure columns align: Vendor, User Name, Email, Role, Access Status, etc."
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Keep the same number of rows as Master Tracker for accurate comparison"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "STEP 3: REVIEW RECONCILIATION REPORT"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Go to '3. Reconciliation Report' sheet"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• This sheet AUTOMATICALLY compares Master vs Vendor data using formulas"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Look for rows with '✗ Mismatch' in 'Status Match?' or 'Role Match?' columns"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• 'Discrepancy Type' column shows what doesn't match"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• 'Action Required' column suggests next steps"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "STEP 4: CHECK SUMMARY DASHBOARD"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Go to '4. Summary Dashboard' sheet"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• View overall reconciliation metrics"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• See total matches, mismatches, and reconciliation rate"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Review discrepancies broken down by vendor"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "STEP 5: RESOLVE DISCREPANCIES"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• For each mismatch, investigate with the vendor"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Update either Master Tracker or ask vendor to correct their records"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Add notes in the 'Notes' column of Reconciliation Report"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Re-run comparison after updates"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "KEY FORMULAS USED:"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Status Match: =IF(Master_Status=Vendor_Status,'✓ Match','✗ Mismatch')"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Role Match: =IF(Master_Role=Vendor_Role,'✓ Match','✗ Mismatch')"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Discrepancy Type: Identifies whether status or role doesn't match"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• Summary metrics: COUNT and COUNTIF formulas to calculate totals"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "TIPS:"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "✓ Update Master Tracker regularly as access changes"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "✓ Request vendor reports weekly or monthly for reconciliation"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "✓ Focus on 'Active' users first — ensure they should have access"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "✓ Investigate 'Revoked' mismatches — security risk if vendor still shows Active"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "✓ Use filters in Reconciliation Report to view only mismatches"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "SUPPORT:"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "For questions about vendor access management:"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• ClinGuard issues: Submit via OneSupport → ClinGuard"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• HCP/Institution data: Email HCP-Registry-Support@sanofi.com"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "• ClinOVault issues: Submit via OneSupport → ClinOVault"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "MASTER TRACKER - Protocol LTS17367"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "Your internal record of vendor access (Source of Truth)"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "VENDOR REPORT - Protocol LTS17367"
+    },
+    {
+      "HOW TO USE THIS RECONCILIATION TRACKER": "Paste vendor-provided access reports here for comparison"
+    }
+  ]
+}

@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;" />
+  <title>cue</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="vision-card.css" />
+  <link rel="stylesheet" href="island-buttons.css" />
+  <link rel="stylesheet" href="resizer.css" />
+  <link rel="stylesheet" href="todo-agent.css" />
+  <link rel="stylesheet" href="permission-card.css" />
+  <link rel="stylesheet" href="commands-menu.css" />
+</head>
+<body>
+  <div id="app">
+    <!-- Static Top-center Dynamic Island -->
+    <div id="toolbar" class="island">
+      <!-- Collapsed Content -->
+      <div class="island-collapsed">
+        <span class="island-time" id="island-time">00:00</span>
+        <canvas id="siri-canvas" class="idle"></canvas>
+      </div>
+      <!-- Expanded Content -->
+      <div class="island-expanded">
+        <div class="island-controls" id="island-main-view">
+          <button class="island-btn" id="btn-mic" title="Microphone"><span class="ic"></span></button>
+          <button class="island-btn" id="btn-vision" title="Circle to Search"><span class="ic"></span></button>
+          <button class="island-btn" id="btn-toggle-panel" title="Toggle Overlay"><span class="ic"></span></button>
+          <button class="island-btn" id="btn-settings" title="Settings"><span class="ic"></span></button>
+          <button class="island-btn" id="btn-dashboard" title="Open Dashboard"><span class="ic"></span></button>
+          <button class="island-btn danger" id="btn-end" title="End Session"><span class="ic"></span></button>
+        </div>
+        <div class="island-settings hidden" id="island-settings-view">
+          <div class="island-settings-header" style="justify-content: flex-start; gap: 10px;">
+            <button class="island-btn small" id="btn-settings-back" title="Back" style="margin: 0;"><span class="ic"></span></button>
+            <span class="island-settings-title">Settings</span>
+          </div>
+          
+          <div style="padding: 0 10px 10px;">
+            <div style="font-size: 11px; color: rgba(255,255,255,0.5); margin-bottom: 6px;">Opacity</div>
+            <input type="range" class="island-slider" id="opacity-slider" min="0.1" max="1.0" step="0.05" value="0.85">
+            
+            <div style="font-size: 11px; color: rgba(255,255,255,0.5); margin: 12px 0 6px;">Transcription Language</div>
+            <div class="custom-select-container" id="island-stt-language-container">
+              <div class="custom-select-trigger" id="island-stt-language-trigger">
+                <span class="custom-select-value">Auto-Detect (Multi)</span>
+                <span class="ic" data-icon="chevron-down" style="width: 14px; height: 14px; opacity: 0.5;"></span>
+              </div>
+              <div class="custom-select-options hidden" id="island-stt-language-options">
+                <div class="custom-select-option" data-value="multi">Auto-Detect (Multi)</div>
+                <div class="custom-select-option" data-value="ta">Tamil (ta)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="island-shortcut-note" id="island-shortcut-note"><span class="keycap">Ctrl</span><span class="keycap">⏎</span> to toggle overlay</div>
+      </div>
+    </div>
+
+    <!-- Main assistant panel (Draggable) -->
+    <div id="panel-wrap">
+      <div id="panel-drag-handle"></div>
+      <div id="panel" class="glass">
+        <div class="panel-header">
+          <span id="live-dot" class="off"></span>
+        </div>
+
+        <div id="setup-screen" style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 40px 20px;">
+          <input type="text" id="setup-meeting-url" placeholder="Paste Meeting URL (Zoom/Teams/Meet)" style="width: 80%; max-width: 400px; padding: 12px 16px; border-radius: 20px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: white; outline: none; font-size: 14px; text-align: center; margin-bottom: 16px; transition: all 0.2s ease;">
+          <button id="btn-start-session" style="padding: 10px 24px; border-radius: 20px; background: white; color: black; border: none; cursor: pointer; font-weight: 600; font-size: 14px; transition: transform 0.1s ease, opacity 0.2s ease;">Join Meeting</button>
+        </div>
+
+        <div id="messages" style="display: none;"></div>
+        
+        <div id="action-row" style="display: none;">
+          <button class="act" data-mode="search"><span class="ic"></span><span>Circle to Search</span></button>
+          <span class="sep">•</span>
+          <button class="act" data-mode="followup"><span class="ic"></span><span>Follow-up</span></button>
+          <span class="sep">•</span>
+          <button class="act" data-mode="evaluate"><span class="ic"></span><span>Evaluate</span></button>
+        </div>
+        <div id="composer" style="display: none;">
+          <div id="command-menu" class="hidden">
+            <div class="cmd-item" data-cmd="/todo ">
+              <div class="cmd-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+              <div class="cmd-text">
+                <span class="cmd-name">/todo [task]</span>
+                <span class="cmd-desc">Add a new evaluation task for the agent to track</span>
+              </div>
+            </div>
+            <div class="cmd-item" data-cmd="/agent ">
+              <div class="cmd-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+              <div class="cmd-text">
+                <span class="cmd-name">/agent [instruction]</span>
+                <span class="cmd-desc">Force the AI to generate a takeover request to ask the candidate directly</span>
+              </div>
+            </div>
+            <div class="cmd-item" data-cmd="/rubric ">
+              <div class="cmd-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+              <div class="cmd-text">
+                <span class="cmd-name">/rubric [criteria] /[score]</span>
+                <span class="cmd-desc">Add a scored rubric item (e.g. /rubric Design /10)</span>
+              </div>
+            </div>
+            <div class="cmd-item" data-cmd="/candidate ">
+              <div class="cmd-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg></div>
+              <div class="cmd-text">
+                <span class="cmd-name">/candidate [name]</span>
+                <span class="cmd-desc">Set or update the name of the candidate</span>
+              </div>
+            </div>
+          </div>
+          <div id="input-area">
+            <div id="placeholder">Ask anything...</div>
+            <textarea id="input" rows="1" spellcheck="false"></textarea>
+          </div>
+          <div id="composer-bottom">
+            <div class="more-menu-container">
+              <button id="more-menu-btn" title="More options" class="more-btn"></button>
+              <div id="more-menu-dropdown" class="dropdown hidden">
+                <div class="dropdown-item" id="btn-settings-dropdown">
+                  <span class="ic" data-icon="settings"></span> Settings
+                </div>
+                <div class="dropdown-item" id="btn-shortcuts-dropdown">
+                  <span class="ic" data-icon="keyboard"></span> Shortcuts
+                </div>
+              </div>
+            </div>
+            <div class="spacer"></div>
+            <button id="send-btn" title="Send"></button>
+          </div>
+        </div>
+        
+        <div id="resize-handle" class="panel-resizer"></div>
+        
+        <!-- Chat Settings Modal -->
+        <div id="chat-settings-modal" class="chat-modal hidden">
+          <div class="chat-modal-header" style="display: flex; justify-content: flex-start; align-items: center; margin-bottom: 16px; gap: 10px;">
+            <button id="btn-chat-settings-back" class="island-btn small" title="Back" style="margin: 0;"><span class="ic" data-icon="chevron-left"></span></button>
+            <span style="font-size: 14px; font-weight: 600;">Settings</span>
+          </div>
+          
+          <div style="font-size: 12px; color: rgba(255,255,255,0.7); margin-bottom: 6px;">Transcription Language</div>
+          <div class="custom-select-container" id="chat-stt-language-container">
+            <div class="custom-select-trigger" id="chat-stt-language-trigger">
+              <span class="custom-select-value">Auto-Detect (Multi)</span>
+              <span class="ic" data-icon="chevron-down" style="width: 14px; height: 14px; opacity: 0.5;"></span>
+            </div>
+            <div class="custom-select-options hidden" id="chat-stt-language-options">
+              <div class="custom-select-option" data-value="multi">Auto-Detect (Multi)</div>
+              <div class="custom-select-option" data-value="ta">Tamil (ta)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <script src="icons.js"></script>
+  <script src="siriWave.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

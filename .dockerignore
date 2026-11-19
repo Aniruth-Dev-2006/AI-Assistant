@@ -1,0 +1,16 @@
+node_modules
+**/node_modules
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+apps/bot/user_data
+apps/bot/.diag
+apps/dashboard/dist
+apps/website
+out
+**/*.test.js
+**/__tests__
+.cursor
+*.log

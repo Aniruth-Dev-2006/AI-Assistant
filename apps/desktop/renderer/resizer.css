@@ -1,0 +1,22 @@
+/* Append to styles.css */
+.panel-resizer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 24px;
+  height: 24px;
+  cursor: se-resize;
+  z-index: 100;
+  opacity: 0.2;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  background-image: 
+    radial-gradient(circle at 18px 18px, rgba(255,255,255,1) 1px, transparent 1.5px),
+    radial-gradient(circle at 14px 14px, rgba(255,255,255,1) 1px, transparent 1.5px),
+    radial-gradient(circle at 10px 10px, rgba(255,255,255,1) 1px, transparent 1.5px);
+}
+.panel-resizer:hover {
+  opacity: 0.6;
+}
+.panel-resizer::after {
+  display: none;
+}

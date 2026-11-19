@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MeetingAI Login</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+    
+  <!-- LOGIN VIEW -->
+  <div class="auth-wrapper" id="auth-wrapper">
+    <div class="auth-hero-side">
+      <h1 class="auth-hero-title">Welcome <span>back.</span></h1>
+      <p class="auth-hero-subtitle">Your team, your insights, your sessions, and every signal in between.</p>
+    </div>
+
+    <div class="auth-form-side">
+      <img 
+        src="https://xobin.com/wp-content/uploads/2026/04/logo-CQAmVy86.png" 
+        alt="Xobin Logo" 
+        class="auth-logo"
+      />
+
+      <div class="auth-form-container">
+        <h2 class="auth-title">Sign <span>in.</span></h2>
+        
+        <div class="auth-form">
+          <div class="input-group">
+            <label for="email-input">Email Address</label>
+            <input 
+              type="text" 
+              placeholder="Enter your email" 
+              class="auth-input"
+              id="email-input"
+            />
+          </div>
+          
+          <div class="input-group">
+            <label for="password-input">Password</label>
+            <input 
+              type="password" 
+              placeholder="Enter your password" 
+              class="auth-input"
+              id="password-input"
+            />
+          </div>
+          
+          <button class="auth-btn-primary" id="btn-email-login">
+            Sign in
+          </button>
+          <div id="auth-error">Invalid credentials</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- DASHBOARD VIEW -->
+  <div class="dashboard-wrapper" id="logged-in-state" style="display: none;">
+    <div class="dashboard-header">
+      <img src="https://xobin.com/wp-content/uploads/2026/04/logo-CQAmVy86.png" alt="Xobin" />
+      <button class="btn-outline" id="btn-logout">Sign Out</button>
+    </div>
+    
+    <div class="dashboard-content">
+      <h2 class="integrations-title">Available Integrations</h2>
+      
+      <div class="integration-card">
+        <div class="integration-info">
+          <div class="integration-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" />
+          </div>
+          <div class="integration-text">
+            <h3>Google Workspace</h3>
+            <p>Sync your Google Calendar, auto-join Google Meets, and push notes to Google Docs.</p>
+          </div>
+        </div>
+        <button class="btn-connect" id="btn-connect-google">Connect</button>
+      </div>
+
+      <div class="integration-card">
+        <div class="integration-info">
+          <div class="integration-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e4/HubSpot_Logo.png" alt="HubSpot" style="height:20px; object-fit:contain;"/>
+          </div>
+          <div class="integration-text">
+            <h3>HubSpot CRM</h3>
+            <p>Pull contact, company, and deal context into your sales calls automatically.</p>
+          </div>
+        </div>
+        <button class="btn-connect" id="btn-connect-hubspot">Connect</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

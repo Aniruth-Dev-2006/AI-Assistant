@@ -1,0 +1,102 @@
+{
+  "name": "cue",
+  "version": "0.1.0",
+  "description": "Open-source macOS invisible AI overlay — three separate inputs (screen, mic, system audio) into an LLM. A Cluely-style copilot for meetings and coding problems.",
+  "license": "GPL-3.0-or-later",
+  "author": "cue",
+  "main": "apps/desktop/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder --mac zip",
+    "build:win": "electron-builder --win"
+  },
+  "build": {
+    "appId": "com.cue.overlay",
+    "productName": "cue",
+    "asar": false,
+    "npmRebuild": false,
+    "compression": "store",
+    "directories": {
+      "output": "out"
+    },
+    "files": [
+      "apps/desktop/**/*",
+      "!node_modules/playwright{,/**}",
+      "!node_modules/playwright-core{,/**}",
+      "!node_modules/puppeteer{,/**}",
+      "!node_modules/mongoose{,/**}",
+      "!node_modules/@google-cloud{,/**}",
+      "!node_modules/ffmpeg-static{,/**}",
+      "!node_modules/assemblyai{,/**}",
+      "!node_modules/bullmq{,/**}",
+      "!node_modules/ioredis{,/**}",
+      "!node_modules/@cartesia{,/**}",
+      "!node_modules/@deepgram{,/**}",
+      "!node_modules/@xenova{,/**}"
+    ],
+    "mac": {
+      "target": [
+        "dir"
+      ],
+      "category": "public.app-category.productivity",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "identity": null,
+      "extendInfo": {
+        "LSUIElement": true,
+        "NSMicrophoneUsageDescription": "cue transcribes your microphone so it can help you in conversations.",
+        "NSCameraUsageDescription": "cue does not use the camera.",
+        "NSAudioCaptureUsageDescription": "cue captures system audio to transcribe the other participant in a call."
+      }
+    },
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    }
+  },
+  "keywords": [
+    "electron",
+    "overlay",
+    "ai",
+    "assistant",
+    "screencapturekit",
+    "macos"
+  ],
+  "devDependencies": {
+    "electron": "^43.1.1",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "@cartesia/cartesia-js": "^3.3.0",
+    "@deepgram/sdk": "^5.6.0",
+    "@google-cloud/pubsub": "^5.3.1",
+    "@google-cloud/tasks": "^6.2.3",
+    "@hubspot/api-client": "^14.0.1",
+    "@qdrant/js-client-rest": "^1.19.0",
+    "@xenova/transformers": "^2.0.1",
+    "assemblyai": "^4.36.3",
+    "bullmq": "^5.81.2",
+    "cheerio": "^1.2.0",
+    "cohere-ai": "^8.1.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "ffmpeg-static": "^5.3.0",
+    "ghost-cursor-playwright": "^2.1.0",
+    "googleapis": "^174.0.1",
+    "ioredis": "^5.11.1",
+    "jsonwebtoken": "^9.0.3",
+    "lucide-static": "^0.468.0",
+    "mongoose": "^9.8.0",
+    "multer": "^2.3.0",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-microsoft": "^2.1.0",
+    "pdf-parse": "^1.1.1",
+    "playwright": "^1.61.1",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "wavefile": "^11.0.0",
+    "ws": "^8.21.1"
+  }
+}

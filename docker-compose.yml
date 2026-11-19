@@ -1,0 +1,18 @@
+services:
+  api:
+    build: .
+    container_name: xobin-meet-api
+    ports:
+      - "${PORT:-8080}:8080"
+    env_file:
+      - .env
+    environment:
+      NODE_ENV: production
+      PORT: "8080"
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:8080}
+      API_BASE_URL: ${API_BASE_URL:-http://localhost:8080}
+      WEBHOOK_BASE_URL: ${WEBHOOK_BASE_URL:-}
+    volumes:
+      - ./apps/bot/user_data:/app/apps/bot/user_data
+    shm_size: "1gb"
+    restart: unless-stopped
